@@ -8,6 +8,17 @@ Further, scaling an application becomes more straightforward as different standa
 
 ---
 
+# Further Documentation and Links
+
+- Further documentation 	- <a href="https://docs.dna-evolutions.com" target="_blank">docs.dna-evolutions.com</a>
+- Special features 	- <a href="https://docs.dna-evolutions.com/overview_docs/special_features/Special_Features.html" target="_blank">Overview of special features</a>
+- Our company website 	- <a href="https://www.dna-evolutions.com" target="_blank">www.dna-evolutions.com</a>
+- Our official repository 	- <a href="https://public.repo.dna-evolutions.com" target="_blank">public.repo.dna-evolutions.com</a>
+- Our official JavaDocs 		- <a href="https://public.javadoc.dna-evolutions.com" target="_blank">public.javadoc.dna-evolutions.com</a>
+- Our YouTube channel - <a href="https://www.youtube.com/channel/UCzfZjJLp5Rrk7U2UKsOf8Fw" target="_blank">DNA Tutorials</a>
+
+---
+
 ## Overview
 
 * [Tech Stack - How JOptTourOptimizer is containerized](#tech-stack-how-jopttouroptimizer-is-containerized)
