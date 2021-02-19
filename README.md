@@ -12,9 +12,7 @@ Further, scaling an application becomes more straightforward as different standa
 ## Tech Stack - How JOptTourOptimizer is containerized
 RESTful JOptTourOptimizer can be used as a <a href="https://en.wikipedia.org/wiki/Docker_software" target="_blank">Docker</a> container utilizing <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html" target="_blank">Spring WebFlux</a> and <a href="https://swagger.io/" target="_blank">Swagger</a>. Internally the Java version of TourOptimizer is utilized.
 
-![Example](https://docs.dna-evolutions.com/rest/touroptimizer/res/touroptimizer-cloud-integration-highres.svg)
-<a href="https://docs.dna-evolutions.com/rest/touroptimizer/res/touroptimizer-cloud-integration-highres.svg" width="600"
-title="TourOptimizer-Docker-Integration" alt="TourOptimizer-Docker-Integration"></a>
+![TourOptimizer-Docker-Integration](https://docs.dna-evolutions.com/rest/touroptimizer/res/touroptimizer-cloud-integration-highres.svg)
 
 ---
 
