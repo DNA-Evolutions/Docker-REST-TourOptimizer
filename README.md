@@ -6,6 +6,8 @@ title="DNA-Evolutions" alt="DNA-Evolutions"></a>
 Containerizing an application helps to use it more conveniently across different platforms and, most importantly, as a microservice. 
 Further, scaling an application becomes more straightforward as different standardized orchestration tools can be utilized. It can be launched either (locally) as part of a docker-compose or as a highly-scalable web-micro-service in a Kubernetes cluster, to give an example.
 
+---
+
 ## Overview
 
 * [Tech Stack - How JOptTourOptimizer is containerized](#tech-stack-how-jopttouroptimizer-is-containerized)
@@ -13,10 +15,8 @@ Further, scaling an application becomes more straightforward as different standa
 * [How to make use of JOptTourOptimizer-Docker](#how-to-make-use-of-jopttouroptimizer-docker)
 * [DNA Demo Application](#dna-demo-application)
 * [How to start the DNA Demo Application](#how-to-start-the-dna-demo-application)
----
 
 ---
-
 
 ## Tech Stack - How JOptTourOptimizer is containerized
 RESTful JOptTourOptimizer can be used as a <a href="https://en.wikipedia.org/wiki/Docker_software" target="_blank">Docker</a> container utilizing <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html" target="_blank">Spring WebFlux</a> and <a href="https://swagger.io/" target="_blank">Swagger</a>. Internally the Java version of TourOptimizer is utilized.
