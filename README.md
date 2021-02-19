@@ -12,6 +12,7 @@ Further, scaling an application becomes more straightforward as different standa
 ## Tech Stack - How JOptTourOptimizer is containerized
 RESTful JOptTourOptimizer can be used as a <a href="https://en.wikipedia.org/wiki/Docker_software" target="_blank">Docker</a> container utilizing <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html" target="_blank">Spring WebFlux</a> and <a href="https://swagger.io/" target="_blank">Swagger</a>. Internally the Java version of TourOptimizer is utilized.
 
+![Example](https://docs.dna-evolutions.com/rest/touroptimizer/res/touroptimizer-cloud-integration-highres.svg)
 <a href="https://docs.dna-evolutions.com/rest/touroptimizer/res/touroptimizer-cloud-integration-highres.svg" width="600"
 title="TourOptimizer-Docker-Integration" alt="TourOptimizer-Docker-Integration"></a>
 
@@ -96,7 +97,7 @@ For example:
 
 ### Setup the Anguar DNA Demo Application
 
-In this walkthrough, we let the demo application access the localhost as in **A)**. Next, you need to launch JOptTourOptimizer-Docker in a container as described in the JOptTourOptimizer [setup](#setup-jopttouroptimizer-docker). The page <a href ="http://localhost:8081 " target ="_blank ">http://localhost:8081</a> needs to be accessible. Further, the container needs to be started with the profile "cors" as described [here](#setup-jopttouroptimizer-docker) in **2)**.
+In this walkthrough, we let the demo application access the localhost as in **A)**. Next, you need to launch JOptTourOptimizer-Docker in a container as described in the JOptTourOptimizer setup. The page <a href ="http://localhost:8081 " target ="_blank ">http://localhost:8081</a> needs to be accessible. Further, the container needs to be started with the profile "cors" as described above.
 
 **1) Pulling the image:**
 
