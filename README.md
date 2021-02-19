@@ -49,7 +49,7 @@ docker run -d --rm \
 ```
 
 
-(Same command as a single line)
+Same command as a single line:
 
 ```xml
 docker run -d --rm  --name myJOptTourOptimizer -e SPRING_PROFILES_ACTIVE="cors" -p 8081:8081  dnaevolutions/jopt_touroptimizer
@@ -61,6 +61,8 @@ Activating the profile "cors" will allow doing REST-calls from the same localhos
 
 
 **3) Open:** <a href="http://localhost:8081" target="_blank">http://localhost:8081</a>
+
+...and you should see the Swagger-Interface.
 
 ---
 
@@ -125,7 +127,7 @@ docker run -d --rm \
 ```
 
 
-(Same command as a single line)
+Same command as a single line:
 
 ```xml
 docker run -d --rm --name myJOptTourOptimizerDemo -p 3000:80 -v ${PWD}:/usr/src/app -e JOPT_SWAGGER_HOST="http://localhost" -e JOPT_SWAGGER_PORT="8081" dnaevolutions/jopt_demoapplication
