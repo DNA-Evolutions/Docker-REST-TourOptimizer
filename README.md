@@ -8,7 +8,7 @@ Further, scaling an application becomes more straightforward as different standa
 
 ---
 
-# Further Documentation and Links
+## Further Documentation and Links
 
 - Further documentation 	- <a href="https://docs.dna-evolutions.com" target="_blank">docs.dna-evolutions.com</a>
 - Special features 	- <a href="https://docs.dna-evolutions.com/overview_docs/special_features/Special_Features.html" target="_blank">Overview of special features</a>
