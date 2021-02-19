@@ -74,8 +74,7 @@ After you opened <a href="http://localhost:8081" target="_blank">http://localhos
 
 Simply copy the Swagger definition under <a href="http://localhost:8081/v3/api-docs" target="_blank">http://localhost:8081/v3/api-docs</a> into the <a href="https://editor.swagger.io/" target="_blank">SwaggerEditor</a> and accept to convert JSON to YAML.
 
-!!! info
-	So far, we have gradually started to "open up" features from the Java Core library for the Swagger frontend. However, each feature needs to be tested and evaluated for its added value.
+_So far, we have gradually started to "open up" features from the Java Core library for the Swagger frontend. However, each feature needs to be tested and evaluated for its added value._
 
 ---
 
@@ -83,8 +82,7 @@ Simply copy the Swagger definition under <a href="http://localhost:8081/v3/api-d
 
 To utilize JOptTourOptimizer-Docker, we created an angular-demo application. This demo application is hosted on <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a> and is made available via <a href="https://demo.dna-evolutions.com/" target="_blank">https://demo.dna-evolutions.com</a>. 
 
-!!! info
-	In the future, we are planning to launch this demo application as an open-source project. Please feel free to contact us in case you already like to get the latest source-code.
+_In the future, we are planning to launch this demo application as an open-source project. Please feel free to contact us in case you already like to get the latest source-code._
 
 The angular-demo application was generated with <a href="https://github.com/angular/angular-cli" target="_blank">Angular CLI version 10.1.2</a>. Further, we utilized <a href="https://github.com/OpenAPITools/openapi-generator" target="_blank">OpenApi Generator</a> to automatically create the required TypeScript models from the OpenApi definition provided from our Swagger definition of JOptTourOptimizer.
 
