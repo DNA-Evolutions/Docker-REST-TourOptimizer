@@ -93,7 +93,7 @@ _So far, we have gradually started to "open up" features from the Java Core libr
 
 To utilize JOptTourOptimizer-Docker, we created an angular-demo application. This demo application is hosted on <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a> and is made available via <a href="https://demo.dna-evolutions.com/" target="_blank">https://demo.dna-evolutions.com</a>. 
 
-You can access the latest source-code at <a href="https://github.com/DNA-Evolutions/Angular-Demo-Application-Source/a>.
+You can access the latest source-code at <a href="https://github.com/DNA-Evolutions/Angular-Demo-Application-Source" target="_blank">https://github.com/DNA-Evolutions/Angular-Demo-Application-Source</a>.
 
 The angular-demo application was generated with <a href="https://github.com/angular/angular-cli" target="_blank">Angular CLI version 10.1.2</a>. Further, we utilized <a href="https://github.com/OpenAPITools/openapi-generator" target="_blank">OpenApi Generator</a> to automatically create the required TypeScript models from the OpenApi definition provided from our Swagger definition of JOptTourOptimizer.
 
