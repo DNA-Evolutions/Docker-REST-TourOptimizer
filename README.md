@@ -113,9 +113,9 @@ For example:
 
 **...**
 
-### Setup the Anguar DNA Demo Application
+### Setup the Angular DNA Demo Application
 
-In this walkthrough, we let the demo application access the localhost as in **A)**. Next, you need to launch JOptTourOptimizer-Docker in a container as described in the JOptTourOptimizer setup. The page <a href ="http://localhost:8081 " target ="_blank ">http://localhost:8081</a> needs to be accessible. Further, the container needs to be started with the profile "cors" as described above.
+In this walkthrough, we let the demo application access the localhost as in **A)**. Next, you need to launch JOptTourOptimizer-Docker in a container as described in the JOptTourOptimizer setup. The page <a href ="http://localhost:8081 " target ="_blank ">http://localhost:8081</a> needs to be accessible. Further, the TourOptimizer container needs to be started with the profile "cors" as described above.
 
 **1) Pulling the image:**
 
