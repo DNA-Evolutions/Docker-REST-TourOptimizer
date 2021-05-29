@@ -75,6 +75,11 @@ Activating the profile "cors" will allow doing REST-calls from the same localhos
 
 ...and you should see the Swagger-Interface.
 
+Preview (click to enlarge):
+
+<a href="https://docs.dna-evolutions.com/indexres/swagger.png" target="_blank"><img src="https://docs.dna-evolutions.com/indexres/swagger.png" width="50%"
+title="Preview of Swagger Interface"></a>
+
 ---
 
 ## How to make use of JOptTourOptimizer-Docker
