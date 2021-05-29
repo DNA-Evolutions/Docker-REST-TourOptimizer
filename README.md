@@ -77,7 +77,7 @@ Activating the profile "cors" will allow doing REST-calls from the same localhos
 
 Preview (click to enlarge):
 
-<a href="https://docs.dna-evolutions.com/indexres/swagger.png" target="_blank"><img src="https://docs.dna-evolutions.com/indexres/swagger.png" width="50%"
+<a href="https://docs.dna-evolutions.com/indexres/swagger.png" target="_blank"><img src="https://docs.dna-evolutions.com/indexres/swagger.png" width="85%"
 title="Preview of Swagger Interface"></a>
 
 ---
