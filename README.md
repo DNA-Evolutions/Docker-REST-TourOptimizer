@@ -90,7 +90,10 @@ After you opened <a href="http://localhost:8081" target="_blank">http://localhos
 
 Simply copy the Swagger definition under <a href="http://localhost:8081/v3/api-docs" target="_blank">http://localhost:8081/v3/api-docs</a> into the <a href="https://editor.swagger.io/" target="_blank">SwaggerEditor</a> and accept to convert JSON to YAML.
 
-_So far, we have gradually started to "open up" features from the Java Core library for the Swagger frontend. However, each feature needs to be tested and evaluated for its added value._
+~~So far, we have gradually started to "open up" features from the Java Core library for the Swagger frontend. However, each feature needs to be tested and evaluated for its added value.~~
+
+Update (May 2021):
+We enabled almost all features now. Contact us in case you need help!
 
 ---
 
