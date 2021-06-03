@@ -92,8 +92,20 @@ Simply copy the Swagger definition under <a href="http://localhost:8081/v3/api-d
 
 ~~So far, we have gradually started to "open up" features from the Java Core library for the Swagger frontend. However, each feature needs to be tested and evaluated for its added value.~~
 
-Update (May 2021):
+**Update (May 2021):**
 We enabled almost all features now. Contact us in case you need help!
+
+Please use the new endpoints for starting an Optimization to enable the latest features:
+
+**1) /api/optimize/config/run**
+
+**2) /api/optimize/config/runOnlyResult**	
+
+The new endpoints are covered by the definition: **OptimizationConfig**
+(<a href="http://localhost:8081/v3/api-docs/OptimizeConfig" target="_blank">api-docs</a>)
+
+The previous endpoints moved to the definition: **LegacyOptimization**
+(<a href="http://localhost:8081/v3/api-docs/LegacyOptimization" target="_blank">api-docs</a>)
 
 ---
 
