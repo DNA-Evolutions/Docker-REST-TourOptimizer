@@ -8,6 +8,12 @@ Further, scaling an application becomes more straightforward as different standa
 
 ---
 
+# Contact
+
+If you need any help, please contact us via our company website <a href="https://www.dna-evolutions.com" target="_blank">www.dna-evolutions.com</a> or write an email to <a href="mailto:info@dna-evolutions.com">info@dna-evolutions.com</a>.
+
+---
+
 ## Further Documentation and Links
 
 - Further documentation 	- <a href="https://docs.dna-evolutions.com" target="_blank">docs.dna-evolutions.com</a>
