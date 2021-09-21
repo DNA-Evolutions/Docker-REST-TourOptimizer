@@ -117,7 +117,7 @@ The new endpoints are covered by the definition: ~~**OptimizationConfig**~~
 
 **Update (September 2021):**
 
-Legacy enpoint is removed.
+Legacy endpoint is removed.
 
 The new endpoints are covered by the definition: **Optimize**
 (<a href="http://localhost:8081/v3/api-docs/Optimize" target="_blank">api-docs</a>)
