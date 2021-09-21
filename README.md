@@ -116,6 +116,7 @@ The new endpoints are covered by the definition: ~~**OptimizationConfig**~~
 ---
 
 **Update (September 2021):**
+
 Legacy enpoint is removed.
 
 The new endpoints are covered by the definition: **Optimize**
