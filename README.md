@@ -107,11 +107,19 @@ Please use the new endpoints for starting an Optimization to enable the latest f
 
 **2) /api/optimize/config/runOnlyResult**	
 
-The new endpoints are covered by the definition: **OptimizationConfig**
-(<a href="http://localhost:8081/v3/api-docs/OptimizeConfig" target="_blank">api-docs</a>)
+The new endpoints are covered by the definition: ~~**OptimizationConfig**~~
+(<a href="http://localhost:8081/v3/api-docs/Optimize" target="_blank">api-docs</a>)
 
-The previous endpoints moved to the definition: **LegacyOptimization**
-(<a href="http://localhost:8081/v3/api-docs/LegacyOptimization" target="_blank">api-docs</a>)
+~~The previous endpoints moved to the definition: **LegacyOptimization**
+(<a href="http://localhost:8081/v3/api-docs/LegacyOptimization" target="_blank">api-docs</a>)~~
+
+---
+
+**Update (September 2021):**
+Legacy enpoint is removed.
+
+The new endpoints are covered by the definition: **Optimize**
+(<a href="http://localhost:8081/v3/api-docs/Optimize" target="_blank">api-docs</a>)
 
 ---
 
