@@ -18,7 +18,7 @@ Should you need assistance or have questions, we're here to help. Please reach o
 * [Step 2: Start a MongoDB Container with User Credentials](#step-2-start-a-mongodb-container-with-user-credentials)
 * [Step 3: Connect Mongo Express](#step-3-connect-mongo-express)
 * [Step 4: Launch TourOptimizer](#step-4-launch-touroptimizer)
-* [Step 5: Run an Optimization and Save/Load the Result](#step-5-run-an-optimization-and-save-load-the-result)
+* [Step 5: Run an Optimization and Save/Load the Result](#step-5-run-an-optimization-and-save-and-load-the-result)
 
 ---
 
@@ -109,7 +109,7 @@ Note: Ensure you're using a relatively new version of `jopt_touroptimizer` (at l
 
 ---
 
-## Step 5: Run an Optimization and Save/Load the Result
+## Step 5: Run an Optimization and Save and Load the Result
 
 To save an optimization in Fire and Forget mode, it's essential to provide an `OptimizationPersistenceSetting` object that manages how the result is stored. This object is defined within the extension object, on the same level as the `keySetting` object.
 
