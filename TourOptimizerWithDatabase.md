@@ -10,6 +10,18 @@ Should you need assistance or have questions, we're here to help. Please reach o
 
 ---
 
+
+## Overview
+
+* [Introduction](#introduction)
+* [Step 1: Establish a Docker Network](#step-1-establish-a-docker-network)
+* [Step 2: Start a MongoDB Container with User Credentials](#step-2-start-a-mongodb-container-with-user-credentials)
+* [Step 3: Connect Mongo Express](#step-3-connect-mongo-express)
+* [Step 4: Launch TourOptimizer](#step-4-launch-touroptimizer)
+* [Step 5: Run an Optimization and Save/Load the Result](#step-5-run-an-optimization-and-save-load-the-result)
+
+---
+
 ## Introduction
 
 The fire and forget mode in DNA's TourOptimizer is designed to handle optimization tasks efficiently while avoiding potential timeout issues that may arise during long-running optimizations. The RESTful API provides, for example, two endpoints, **run** and **runFAF**, to cater to different use cases:
@@ -215,10 +227,3 @@ For reading our license agreement and for further information about license plan
 
 ## Authors
 A product by [dna-evolutions ](https://www.dna-evolutions.com)&copy;
-
-<!--- 
-
-docker run --rm --name myJOptTourOptimizer4 -e SPRING_PROFILES_ACTIVE="cors" -e DNA_DATABASE_ACTIVE=true -e DNA_DATABASE_URI="mongodb://dnauser:dnapwd@dnamongo:27017/admin" -e DNA_DATABASE_DB=touroptimizer3 --network mongonetwork -p 8081:8081 dnaevolutions/jopt_touroptimizer:latest
-
--->
-
