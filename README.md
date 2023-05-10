@@ -29,6 +29,7 @@ If you need any help, please contact us via our company website <a href="https:/
 
 * [Tech Stack - How JOptTourOptimizer is containerized](#tech-stack-how-jopttouroptimizer-is-containerized)
 * [How to start JOptTourOptimizer-Docker](#how-to-start-jopttouroptimizer-docker)
+* [How to start JOptTourOptimizer-Docker - Fire and Forget Mode](#how-to-start-jopttouroptimizer-docker-in-fire-and-forget-mode)
 * [How to make use of JOptTourOptimizer-Docker](#how-to-make-use-of-jopttouroptimizer-docker)
 * [DNA Demo Application](#dna-demo-application)
 * [How to start the DNA Demo Application](#how-to-start-the-dna-demo-application)
@@ -52,7 +53,7 @@ Setting up JOptTourOptimizer in your Docker environment only takes these three s
 **1) Pulling the image:**
 
 ```xml
-docker pull dnaevolutions/jopt_touroptimizer
+docker pull dnaevolutions/jopt_touroptimizer:latest
 ```
 
 **2) Running a container:**
@@ -62,14 +63,14 @@ docker run -d --rm \
  	--name myJOptTourOptimizer \
  	-e SPRING_PROFILES_ACTIVE="cors" \
  	-p 8081:8081  \
- 	dnaevolutions/jopt_touroptimizer
+ 	dnaevolutions/jopt_touroptimizer:latest
 ```
 
 
 Same command as a single line:
 
 ```xml
-docker run -d --rm  --name myJOptTourOptimizer -e SPRING_PROFILES_ACTIVE="cors" -p 8081:8081  dnaevolutions/jopt_touroptimizer
+docker run -d --rm  --name myJOptTourOptimizer -e SPRING_PROFILES_ACTIVE="cors" -p 8081:8081  dnaevolutions/jopt_touroptimizer:latest
 ```
 
 Activating the profile "cors" will allow doing REST-calls from the same localhost from another application.
@@ -88,6 +89,12 @@ title="Preview of Swagger Interface"></a>
 
 ---
 
+## How to start JOptTourOptimizer-Docker in Fire and Forget Mode
+
+Please refer to the separate **Hands-on Tutorial: Setting Up a Local Fire and Forget TourOptimizer-Database Test Environment** [tutorial](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerWithDatabase.md).
+
+---
+
 ## How to make use of JOptTourOptimizer-Docker
 
 By default, you are allowed to run an Optimization with up to 15 elements without providing a license key. In case you already have a license key for JOptTourOptimizer (Java-Maven) you can use that one.
@@ -95,32 +102,6 @@ By default, you are allowed to run an Optimization with up to 15 elements withou
 After you opened <a href="http://localhost:8081" target="_blank">http://localhost:8081</a> you see the Swagger interface of JOptTourOptimizer. You can generate a client in your desired language by using the <a href="https://editor.swagger.io/" target="_blank">SwaggerEditor</a>.
 
 Simply copy the Swagger definition under <a href="http://localhost:8081/v3/api-docs" target="_blank">http://localhost:8081/v3/api-docs</a> into the <a href="https://editor.swagger.io/" target="_blank">SwaggerEditor</a> and accept to convert JSON to YAML.
-
-~~So far, we have gradually started to "open up" features from the Java Core library for the Swagger frontend. However, each feature needs to be tested and evaluated for its added value.~~
-
-**Update (May 2021):**
-We enabled almost all features now. Contact us in case you need help!
-
-Please use the new endpoints for starting an Optimization to enable the latest features:
-
-**1) /api/optimize/config/run**
-
-**2) /api/optimize/config/runOnlyResult**	
-
-The new endpoints are covered by the definition: ~~**OptimizationConfig**~~
-(<a href="http://localhost:8081/v3/api-docs/Optimize" target="_blank">api-docs</a>)
-
-~~The previous endpoints moved to the definition: **LegacyOptimization**
-(<a href="http://localhost:8081/v3/api-docs/LegacyOptimization" target="_blank">api-docs</a>)~~
-
----
-
-**Update (September 2021):**
-
-Legacy endpoint is removed.
-
-The new endpoints are covered by the definition: **Optimize**
-(<a href="http://localhost:8081/v3/api-docs/Optimize" target="_blank">api-docs</a>)
 
 ---
 
@@ -194,7 +175,3 @@ For reading our license agreement and for further information about license plan
 
 ## Authors
 A product by [dna-evolutions ](https://www.dna-evolutions.com)&copy;
-
-
-<!--- - test -->
-
