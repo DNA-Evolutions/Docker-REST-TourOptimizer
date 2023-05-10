@@ -10,7 +10,6 @@ Should you need assistance or have questions, we're here to help. Please reach o
 
 ---
 
-
 ## Overview
 
 * [Introduction](#introduction)
@@ -32,11 +31,13 @@ The fire and forget mode in DNA's TourOptimizer is designed to handle optimizati
 
 The fire and forget mode allows you to efficiently manage resources and streamline the optimization process, particularly when working with large optimization problems or when running multiple optimizations simultaneously. The TourOptimizer saves the resulting snapshots to a MongoDB database, and you can easily retrieve the saved results using other provided endpoints when needed.
 
+
 ---
 
 # Hands-on Tutorial: Setting Up a Local Fire and Forget TourOptimizer-Database Test Environment
 
 This guide aims to help you initiate an optimization using DNA's TourOptimizer, store the results in a MongoDB, and retrieve them. For added convenience, we will also connect Mongo-Express to the database for easy data visualization.
+
 
 ---
 
@@ -89,8 +90,7 @@ Start TourOptimizer with the appropriate database-related environment variables 
 
 Also, ensure to run the container inside the correct network (`--network mongonetwork`).
 
-For a complete list of environment variables, refer to the TourOptimizer Docker Variables documentation (To be added...).
-
+For a complete list of environment variables, refer to the [TourOptimizer Docker Variables documentation](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerDockerVars.md).
 
 ```bash
 docker run --rm --name myJOptTourOptimizer \
@@ -160,11 +160,11 @@ Create an `OptimizationPersistenceSetting` object with these settings and send i
 
 ### Java client
 
-We prepared three examples that you can find in our [Java-REST-Client-Examples](https://github.com/DNA-Evolutions/Java-REST-Client-Examples) repository.  XXX LINK
+We prepared three examples that you can find in our [Java-REST-Client-Examples](https://github.com/DNA-Evolutions/Java-REST-Client-Examples/tree/master/src/main/java/com/dna/jopt/rest/client/example/touroptimizer/fireandforget) repository.
 
-- `TourOptimizerFireAndForgetExample.java`: Demonstrates how to run an optimization and save it to the database.
-- `TourOptimizerFireAndForgetSearchInDatabaseExample.java`: Shows how to search optimizations within a database and display their meta info.
-- `TourOptimizerFireAndForgetLoadFromDatabaseExample.java`: Guides how to load an optimization from a database.
+- `TourOptimizerFireAndForgetExample.java`: Demonstrates how to run an optimization and save it to the database ([Link](https://github.com/DNA-Evolutions/Java-REST-Client-Examples/blob/master/src/main/java/com/dna/jopt/rest/client/example/touroptimizer/fireandforget/run/TourOptimizerFireAndForgetExample.java)).
+- `TourOptimizerFireAndForgetSearchInDatabaseExample.java`: Shows how to search optimizations within a database and display their meta info ([Link](https://github.com/DNA-Evolutions/Java-REST-Client-Examples/blob/master/src/main/java/com/dna/jopt/rest/client/example/touroptimizer/fireandforget/read/TourOptimizerFireAndForgetSearchInDatabaseExample.java)).
+- `TourOptimizerFireAndForgetLoadFromDatabaseExample.java`: Guides how to load an optimization from a database ([Link](https://github.com/DNA-Evolutions/Java-REST-Client-Examples/blob/master/src/main/java/com/dna/jopt/rest/client/example/touroptimizer/fireandforget/read/TourOptimizerFireAndForgetLoadFromDatabaseExample.java)).
 
 ---
 
