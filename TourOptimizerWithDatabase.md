@@ -168,7 +168,14 @@ We prepared three examples that you can find in our [Java-REST-Client-Examples](
 
 ---
 
-### C# Client (To be added...)
+### C# Client
+
+We prepared three examples that you can find in our [C#-REST-Client-Examples](https://github.com/DNA-Evolutions/C-Sharp-REST-Client-Examples) repository.
+
+- Project `TourOptimizerFAFExample.csproj`: Demonstrates how to run an optimization and save it to the database ([Link](https://github.com/DNA-Evolutions/C-Sharp-REST-Client-Examples/tree/master/src/Dna.Example/TourOptimizer/optimizeFAF)).
+- Project `TourOptimizerSearchFAFExample.csproj`: Shows how to search optimizations within a database and display their meta info ([Link](https://github.com/DNA-Evolutions/C-Sharp-REST-Client-Examples/tree/master/src/Dna.Example/TourOptimizer/searchFAF)).
+- Project `TourOptimizerLoadFAFExample.csproj`: Guides how to load an optimization from a database ([Link](https://github.com/DNA-Evolutions/C-Sharp-REST-Client-Examples/tree/master/src/Dna.Example/TourOptimizer/loadFAF)).
+
 
 ---
 
