@@ -77,6 +77,8 @@ Activating the profile "cors" will allow doing REST-calls from the same localhos
 
 (If desired, please adjust <a href="https://docs.docker.com/engine/reference/run/" target="_blank">docker run argument</a> to your needs)
 
+For a complete list of environment variables, refer to the [TourOptimizer Docker Variables documentation](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerDockerVars.md).
+
 
 **3) Open:** <a href="http://localhost:8081" target="_blank">http://localhost:8081</a>
 
