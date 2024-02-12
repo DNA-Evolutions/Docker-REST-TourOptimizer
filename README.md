@@ -113,13 +113,11 @@ To utilize JOptTourOptimizer-Docker, we created an angular-demo application. Thi
 
 You can access the latest source-code at <a href="https://github.com/DNA-Evolutions/Angular-Demo-Application-Source" target="_blank">https://github.com/DNA-Evolutions/Angular-Demo-Application-Source</a>.
 
-The angular-demo application was generated with <a href="https://github.com/angular/angular-cli" target="_blank">Angular CLI version 10.1.2</a>. Further, we utilized <a href="https://github.com/OpenAPITools/openapi-generator" target="_blank">OpenApi Generator</a> to automatically create the required TypeScript models from the OpenApi definition provided from our Swagger definition of JOptTourOptimizer.
-
 ---
 
 ## How to start the DNA Demo Application
 
-The demo application is also available on <a href="https://hub.docker.com/r/dnaevolutions/jopt_demoapplication" target="_blank">Docker Hub</a>. There are multiple ways on how you can attach the demo application to JOptTourOptimizer-Docker.
+The demo application is also available on <a href="https://hub.docker.com/r/dnaevolutions/jopt_demoapplication" target="_blank">Docker Hub</a>. There are multiple ways how you can attach the demo application to JOptTourOptimizer-Docker.
 
 For example:
 
