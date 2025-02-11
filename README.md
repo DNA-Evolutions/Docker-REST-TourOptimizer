@@ -16,7 +16,7 @@ If you need any help, please contact us via our company website <a href="https:/
 
 ## Sandboxes Overview
 
-For a complete list of JOpt Sandboxes, refer to the [TourOptimizer Docker Variables documentation](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/Sandboxes.md).
+For a complete list of JOpt Sandboxes, refer to the [Sandboxes overview document](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/Sandboxes.md).
 
 ---
 
