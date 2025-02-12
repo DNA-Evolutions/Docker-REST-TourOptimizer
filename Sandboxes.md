@@ -8,7 +8,7 @@ The JOptTourOptimizer suite offers a flexible routing optimization engine design
 
 Please note that you can also use the sandboxes to access a JoptTourOptimizer that is NOT hosted locally.
 
-### 1. Starting a Locally Running TourOptimizer Spring Server via Docker
+### (Optional) 1. Starting a Locally Running TourOptimizer Spring Server via Docker
 To start the JOptTourOptimizer Spring Server locally using Docker, follow these steps:
 
 1. **Pull the Docker Image:**
@@ -24,12 +24,12 @@ To start the JOptTourOptimizer Spring Server locally using Docker, follow these 
 
 For more detailed instructions, refer to the [Docker-REST-TourOptimizer README](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/README.md). 
 
-The JOptTourOptimizer also supports a fire and forget mode, allowing you to submit optimization requests without waiting for immediate results. This is particularly useful for handling large datasets or complex optimization scenarios. For more information on the fire and forget mode, refer to its [documentation](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerWithDatabase.md).
+The JOptTourOptimizer also supports a fire-and-forget mode, allowing you to submit optimization requests without waiting for immediate results. This is particularly useful for handling large datasets or complex optimization scenarios. For more information on the fire-and-forget mode, refer to its [documentation](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerWithDatabase.md).
 
 ### 2. Sandboxes for Accessing the Locally Running TourOptimizer Engine
 You can use several sandboxes implemented via code-server and Docker to interact with the locally running TourOptimizer engine. These sandboxes provide an easy way to experiment with the optimizer without setting up a complete development environment.
 
-Please note that each sandbox is a docker container and you need to connect to a local JOptTourOptimizer via the endpoint `http://host.docker.internal:8081` instead of ~`http://localhost:8081`~.
+Please note that each sandbox is a docker container, and you need to connect to a local JOptTourOptimizer via the endpoint `http://host.docker.internal:8081` instead of ~`http://localhost:8081`~.
 
 
 #### Python Sandbox
