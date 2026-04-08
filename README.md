@@ -1,185 +1,228 @@
-# Docker-REST-TourOptimizer
+<p align="center">
+  <img src="https://www.dna-evolutions.com/images/dna_logo.png" width="200" alt="DNA Evolutions Logo">
+</p>
 
-<a href="https://dna-evolutions.com/" target="_blank"><img src="https://docs.dna-evolutions.com/indexres/dna-temp-logo.png" width="110"
-title="DNA-Evolutions" alt="DNA-Evolutions"></a>
+<h1 align="center">JOpt.TourOptimizer REST Server</h1>
 
-Containerizing an application helps to use it more conveniently across different platforms and, most importantly, as a microservice. 
-Further, scaling an application becomes more straightforward as different standardized orchestration tools can be utilized. It can be launched either (locally) as part of a docker-compose or as a highly-scalable web-micro-service in a Kubernetes cluster, to give an example.
+<p align="center">
+  <strong>Route optimization, scheduling, and resource planning as a reactive REST service.</strong>
+</p>
 
----
+<p align="center">
+  <a href="https://www.dna-evolutions.com/docs/getting-started/home/introduction">Documentation</a> · 
+  <a href="https://www.dna-evolutions.com/docs/learn-and-explore/rest/rest-server-touroptimizer">Server Guide</a> · 
+  <a href="https://www.dna-evolutions.com/docs/learn-and-explore/rest/rest_client_touroptimizer">REST Clients</a> · 
+  <a href="https://www.dna-evolutions.com/docs/getting-started/quickstart/jopt-ai-assistant">AI Assistant</a> · 
+  <a href="https://demo.dna-evolutions.com">Live Demo</a> · 
+  <a href="https://www.dna-evolutions.com/contact/">Contact</a>
+</p>
 
-# Contact
-
-If you need any help, please contact us via our company website <a href="https://www.dna-evolutions.com" target="_blank">www.dna-evolutions.com</a> or write an email to <a href="mailto:info@dna-evolutions.com">info@dna-evolutions.com</a>.
-
----
-
-## Sandboxes Overview
-
-For a complete list of JOpt Sandboxes, refer to the [Sandboxes overview document](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/Sandboxes.md).
-
----
-
-## Further Documentation and Links
-
-- Further documentation 	- <a href="https://docs.dna-evolutions.com" target="_blank">docs.dna-evolutions.com</a>
-- Special features 	- <a href="https://docs.dna-evolutions.com/overview_docs/special_features/Special_Features.html" target="_blank">Overview of special features</a>
-- Our company website 	- <a href="https://www.dna-evolutions.com" target="_blank">www.dna-evolutions.com</a>
-- Our official repository 	- <a href="https://public.repo.dna-evolutions.com" target="_blank">public.repo.dna-evolutions.com</a>
-- Our official JavaDocs 		- <a href="https://public.javadoc.dna-evolutions.com" target="_blank">public.javadoc.dna-evolutions.com</a>
-- Our YouTube channel - <a href="https://www.youtube.com/channel/UCzfZjJLp5Rrk7U2UKsOf8Fw" target="_blank">DNA Tutorials</a>
+<p align="center">
+  <a href="https://hub.docker.com/r/dnaevolutions/jopt_touroptimizer"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/dnaevolutions/jopt_touroptimizer?style=flat-square&color=8A9219"></a>
+  <a href="https://www.dna-evolutions.com"><img alt="Website" src="https://img.shields.io/badge/website-dna--evolutions.com-8A9219?style=flat-square"></a>
+  <a href="https://www.linkedin.com/company/dna-evolutions/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-DNA_Evolutions-8A9219?style=flat-square&logo=linkedin"></a>
+</p>
 
 ---
 
-## Overview
+## What is this?
 
-* [Tech Stack - How JOptTourOptimizer is containerized](#tech-stack-how-jopttouroptimizer-is-containerized)
-* [How to start JOptTourOptimizer-Docker](#how-to-start-jopttouroptimizer-docker)
-* [How to start JOptTourOptimizer-Docker - Fire and Forget Mode](#how-to-start-jopttouroptimizer-docker-in-fire-and-forget-mode)
-* [How to make use of JOptTourOptimizer-Docker](#how-to-make-use-of-jopttouroptimizer-docker)
-* [DNA Demo Application](#dna-demo-application)
-* [How to start the DNA Demo Application](#how-to-start-the-dna-demo-application)
+JOpt.TourOptimizer is a backend optimization engine for vehicle routing, field service scheduling, and resource planning. This repository provides the **containerized REST server**: a reactive Spring WebFlux application that exposes the full optimizer via REST endpoints with an OpenAPI 3 contract (Swagger UI).
 
----
+You send a JSON optimization request. The server returns an optimized plan with routes, schedules, cost breakdowns, and violation details.
 
-## Tech Stack - How JOptTourOptimizer is containerized
-RESTful JOptTourOptimizer can be used as a <a href="https://en.wikipedia.org/wiki/Docker_software" target="_blank">Docker</a> container utilizing <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html" target="_blank">Spring WebFlux</a> and <a href="https://swagger.io/" target="_blank">Swagger</a>. Internally the Java version of TourOptimizer is utilized.
+**This is a pre-built Docker image.** You do not need to compile anything. Pull the image, start the container, and call the API.
 
-![TourOptimizer-Docker-Integration](https://docs.dna-evolutions.com/rest/touroptimizer/res/touroptimizer-cloud-integration-highres.svg)
 
 ---
 
-## How to start JOptTourOptimizer-Docker
-JOptTourOptimizer is hosted on <a href="https://hub.docker.com/r/dnaevolutions/jopt_touroptimizer" target="_blank">Docker Hub</a>. In a first step, you can pull the image and start a container in your local docker environment, using, for example, <a href="https://docs.docker.com/desktop/" target="_blank">Docker Desktop</a>.
+## Quick start
 
-### Setup JOptTourOptimizer-Docker
-
-Setting up JOptTourOptimizer in your Docker environment only takes these three steps:
-
-**1) Pulling the image:**
-
-```xml
-docker pull dnaevolutions/jopt_touroptimizer:latest
+```bash
+docker run -d --rm --name jopt-touroptimizer \
+  -p 8081:8081 \
+  -e SPRING_PROFILES_ACTIVE=cors \
+  dnaevolutions/jopt_touroptimizer:latest
 ```
 
-**2) Running a container:**
+**Swagger UI:** [http://localhost:8081/swagger-ui/index.html](http://localhost:8081/swagger-ui/index.html)  
+**OpenAPI JSON:** [http://localhost:8081/v3/api-docs](http://localhost:8081/v3/api-docs)
 
-```xml
-docker run -d --rm \
- 	--name myJOptTourOptimizer \
- 	-e SPRING_PROFILES_ACTIVE="cors" \
- 	-p 8081:8081  \
- 	dnaevolutions/jopt_touroptimizer:latest
-```
+That is all you need to start evaluating. Paste a JSON payload into the Swagger UI and run an optimization.
 
+> **Free mode:** Up to 20 elements (nodes + resources) without a license. Extended evaluation (37 elements) with a free [sign-up](https://www.dna-evolutions.com/docs/learn-and-explore/feature-guides/license#free-license).
 
-Same command as a single line:
+For full deployment documentation (including database mode, Kubernetes, Terraform, and platform-specific guides), see the [Server Guide](https://www.dna-evolutions.com/docs/learn-and-explore/rest/rest-server-touroptimizer).
 
-```xml
-docker run -d --rm  --name myJOptTourOptimizer -e SPRING_PROFILES_ACTIVE="cors" -p 8081:8081  dnaevolutions/jopt_touroptimizer:latest
-```
-
-Activating the profile "cors" will allow doing REST-calls from the same localhost from another application.
-
-(If desired, please adjust <a href="https://docs.docker.com/engine/reference/run/" target="_blank">docker run argument</a> to your needs)
-
-For a complete list of environment variables, refer to the [TourOptimizer Docker Variables documentation](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerDockerVars.md).
-
-
-**3) Open:** <a href="http://localhost:8081" target="_blank">http://localhost:8081</a>
-
-...and you should see the Swagger-Interface.
-
-Preview (click to enlarge):
-
-<a href="https://docs.dna-evolutions.com/indexres/swagger.png" target="_blank"><img src="https://docs.dna-evolutions.com/indexres/swagger.png" width="85%"
-title="Preview of Swagger Interface"></a>
 
 ---
 
-## How to start JOptTourOptimizer-Docker in Fire and Forget Mode
+## Full start (with database for fire-and-forget mode)
 
-Please refer to the separate **Hands-on Tutorial: Setting Up a Local Fire and Forget TourOptimizer-Database Test Environment** [tutorial](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerWithDatabase.md).
+For asynchronous job submission, persistence, and webhook-based result delivery:
+
+```bash
+# Create a network
+docker network create mongonetwork
+
+# Start MongoDB
+docker run -d --name dnamongo --network mongonetwork \
+  -p 27017:27017 \
+  -e MONGO_INITDB_ROOT_USERNAME=dnauser \
+  -e MONGO_INITDB_ROOT_PASSWORD=dnapwd \
+  mongo:latest
+
+# Start TourOptimizer with all features
+docker run --rm --name jopt-touroptimizer \
+  --network mongonetwork \
+  -p 8081:8081 \
+  -e SPRING_PROFILES_ACTIVE=cors \
+  -e DNA_DATABASE_ACTIVE=true \
+  -e DNA_DATABASE_URI="mongodb://dnauser:dnapwd@dnamongo:27017/admin" \
+  -e DNA_DATABASE_DB=touroptimizer \
+  -e DNA_SHOW_SYNCH_CONTROLLERS=true \
+  -e DNA_DATABASE_FREE_SEARCH_ENABLED=true \
+  -e DNA_DATABASE_JOB_IMPORT_ENABLED=true \
+  -e DNA_WEBHOOK_VALIDATION=relaxed \
+  dnaevolutions/jopt_touroptimizer:latest
+```
+
+For details on fire-and-forget mode, see the [FAF documentation](https://www.dna-evolutions.com/docs/learn-and-explore/rest/touroptimizer-faf).
+
 
 ---
 
-## How to make use of JOptTourOptimizer-Docker
+## Architecture
 
-By default, you are allowed to run an Optimization with up to 15 elements without providing a license key. In case you already have a license key for JOptTourOptimizer (Java-Maven) you can use that one.
+| Property | Value |
+|---|---|
+| **Runtime** | Java 17, Spring Boot 3.4.x |
+| **HTTP stack** | Spring WebFlux (reactive, non-blocking) |
+| **API** | REST + OpenAPI 3.0 (Swagger UI) + SSE streaming |
+| **State** | Stateless core. Optional MongoDB for async jobs. |
+| **Scaling** | Horizontal. No sticky sessions. No shared in-memory state. |
+| **Compute profile** | CPU-bound optimization, memory-intensive problem graphs |
+| **Image** | Pre-built. No build tooling required. |
 
-After you opened <a href="http://localhost:8081" target="_blank">http://localhost:8081</a> you see the Swagger interface of JOptTourOptimizer. You can generate a client in your desired language by using the <a href="https://editor.swagger.io/" target="_blank">SwaggerEditor</a>.
+The server exposes synchronous endpoints (request, wait, result) and asynchronous fire-and-forget endpoints (submit job, poll or receive webhook). Progress streaming is available via Server-Sent Events.
 
-Simply copy the Swagger definition under <a href="http://localhost:8081/v3/api-docs" target="_blank">http://localhost:8081/v3/api-docs</a> into the <a href="https://editor.swagger.io/" target="_blank">SwaggerEditor</a> and accept to convert JSON to YAML.
 
 ---
 
-## DNA Demo Application
+## REST client libraries
 
-To utilize JOptTourOptimizer-Docker, we created an angular-demo application. This demo application is hosted on <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a> and is made available via <a href="https://demo.dna-evolutions.com/" target="_blank">https://demo.dna-evolutions.com</a>. 
+OpenAPI-generated client libraries are available for multiple languages:
 
-You can access the latest source-code at <a href="https://github.com/DNA-Evolutions/Angular-Demo-Application-Source" target="_blank">https://github.com/DNA-Evolutions/Angular-Demo-Application-Source</a>.
+| Language | Repository |
+|---|---|
+| **Java** | [Java REST Client Examples](https://github.com/DNA-Evolutions/Java-REST-Client-Examples) |
+| **Python** | [Python REST Client Examples](https://github.com/DNA-Evolutions/Python-REST-Client-Examples) |
+| **C# / .NET** | [C# REST Client Examples](https://github.com/DNA-Evolutions/C-Sharp-REST-Client-Examples) |
+| **TypeScript / Angular** | [Angular Demo Application](https://github.com/DNA-Evolutions/Angular-Demo-Application-Source) |
+
+All clients connect to this server. For client setup instructions, see the [REST Client documentation](https://www.dna-evolutions.com/docs/learn-and-explore/rest/rest_client_touroptimizer).
+
+> **Docker networking note:** If your client runs inside a container and the server runs on the host, use `http://host.docker.internal:8081` instead of `http://localhost:8081`.
+
 
 ---
 
-## How to start the DNA Demo Application
+## Docker sandboxes (browser-based evaluation)
 
-The demo application is also available on <a href="https://hub.docker.com/r/dnaevolutions/jopt_demoapplication" target="_blank">Docker Hub</a>. There are multiple ways how you can attach the demo application to JOptTourOptimizer-Docker.
+If you want to explore JOpt in a browser IDE without any local toolchain, Docker sandboxes are available:
 
-For example:
+| Sandbox | Image | Port | Password |
+|---|---|---|---|
+| Java SDK Examples | `dnaevolutions/jopt_example_server:latest` | 8042 | `jopt` |
+| Java REST Client | `dnaevolutions/jopt_rest_example_server:latest` | 8043 | `joptrest` |
+| Python REST Client | `dnaevolutions/jopt_py_example_server:latest` | 8033 | `jopt` |
+| C# REST Client | `dnaevolutions/jopt_net_example_server:latest` | 8023 | `joptrest` |
 
-**A)** Let the demo container directly access the localhost (<a href="https://de.wikipedia.org/wiki/Cross-Origin_Resource_Sharing" target="_blank">CORS</a> eventually needs to be enabled for the browser).
-
-**B)** Using a docker-compose with both containers. Only expose the demo application if desired.
-
-**C)** Attaching the demo container to the same network.
-
-**...**
-
-### Setup the Angular DNA Demo Application
-
-In this walkthrough, we let the demo application access the localhost as in **A)**. Next, you need to launch JOptTourOptimizer-Docker in a container as described in the JOptTourOptimizer setup. The page <a href ="http://localhost:8081 " target ="_blank ">http://localhost:8081</a> needs to be accessible. Further, the TourOptimizer container needs to be started with the profile "cors" as described above.
-
-**1) Pulling the image:**
-
-```xml
-docker pull dnaevolutions/jopt_demoapplication
+Example:
+```bash
+docker run -it -d --name jopt-examples \
+  -p 127.0.0.1:8042:8080 \
+  dnaevolutions/jopt_example_server:latest
 ```
 
-**2) Running a container:**
-
-```xml
-docker run -d --rm \
-	--name myJOptTourOptimizerDemo \
-	-p 3000:80 \
-	-v ${PWD}:/usr/src/app \
-	-e JOPT_SWAGGER_HOST="http://localhost" \
-	-e JOPT_SWAGGER_PORT="8081" \
-	dnaevolutions/jopt_demoapplication
-```
+Open [http://localhost:8042](http://localhost:8042) in your browser. For details, see the [Sandboxes documentation](https://www.dna-evolutions.com/docs/learn-and-explore/feature-guides/jopt-sandboxes).
 
 
-Same command as a single line:
+---
 
-```xml
-docker run -d --rm --name myJOptTourOptimizerDemo -p 3000:80 -v ${PWD}:/usr/src/app -e JOPT_SWAGGER_HOST="http://localhost" -e JOPT_SWAGGER_PORT="8081" dnaevolutions/jopt_demoapplication
-```
+## Key features
 
-(If desired, please adjust <a href="https://docs.docker.com/engine/reference/run/" target="_blank">docker run argument</a> to your needs)
+JOpt.TourOptimizer supports a comprehensive set of routing and scheduling features. For the full list with documentation links, see the [Feature List](https://www.dna-evolutions.com/docs/learn-and-explore/features/featurelist) and [Special Features](https://www.dna-evolutions.com/docs/learn-and-explore/special/special_features).
 
-For a complete list of environment variables, refer to the [TourOptimizer Docker Variables documentation](https://github.com/DNA-Evolutions/Docker-REST-TourOptimizer/blob/main/TourOptimizerDockerVars.md).
+Highlights:
+
+- **Pillar Nodes:** guaranteed SLA matching by architecture, not by penalty costs
+- **AutoFilter:** multi-solution infeasibility management with transparent exclusion reporting
+- **Manufacturing Planning:** dynamic production quantities as optimizer-controlled planning variables
+- **ZoneCodes:** per-shift territory switching with multi-zone node membership
+- **Zone Crossing Penalization:** asymmetric directional costs for bridge/tunnel/toll boundaries
+- **Pickup and Delivery:** SimpleLoads, FlexLoads, TimedLoads, split delivery optimization
+- **Overnight Stay:** multi-day routing with policy thresholds and recovery rules
+- **FlexTime:** flexible shift starts (positive and negative) with labor policy controls
+- **Open Assessor:** custom business rules injected via a stable, minimal interface
+- **Reactive Events:** 9 typed RxJava 3 event streams, native Spring WebFlux integration
 
 
-**3) Open:** <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+---
 
-...and you should see the DNA-Demo-Application.
+## Deployment guides
+
+For production deployment on different platforms:
+
+- [Linux](https://www.dna-evolutions.com/docs/system-integration/containerized-deployment/jopt-container-linux)
+- [Windows](https://www.dna-evolutions.com/docs/system-integration/containerized-deployment/jopt-container-win)
+- [macOS](https://www.dna-evolutions.com/docs/system-integration/containerized-deployment/jopt-container-macos)
+- [Kubernetes](https://www.dna-evolutions.com/docs/system-integration/containerized-deployment/kubertnetes)
+- [Terraform / Enterprise](https://www.dna-evolutions.com/docs/system-integration/containerized-deployment/terraform)
+
+
+---
+
+## Licensing
+
+| Mode | Limit | Requirement |
+|---|---|---|
+| Free | 20 elements | None |
+| Evaluation | 37 elements | Free [sign-up](https://www.dna-evolutions.com/docs/learn-and-explore/feature-guides/license#free-license) |
+| Production | Unlimited | License key ([contact us](https://www.dna-evolutions.com/contact/)) |
+
+License documentation: [License feature guide](https://www.dna-evolutions.com/docs/learn-and-explore/feature-guides/license)
+
+
+---
+
+## Further resources
+
+| Resource | Link |
+|---|---|
+| Documentation Hub | [dna-evolutions.com/docs](https://www.dna-evolutions.com/docs/getting-started/home/introduction) |
+| AI Assistant (GPT) | [JOpt AI Assistant](https://www.dna-evolutions.com/docs/getting-started/quickstart/jopt-ai-assistant) |
+| Java SDK Examples | [GitHub](https://github.com/DNA-Evolutions/Java-TourOptimizer-Examples) |
+| Live Demo | [demo.dna-evolutions.com](https://demo.dna-evolutions.com) |
+| OpenAPI Schema | [swagger.dna-evolutions.com](https://swagger.dna-evolutions.com/v3/api-docs/OptimizeConfig) |
+| Public JavaDoc | [public.javadoc.dna-evolutions.com](https://public.javadoc.dna-evolutions.com) |
+| FAQ | [FAQ](https://www.dna-evolutions.com/docs/learn-and-explore/features/faq) |
+| YouTube | [DNA Evolutions Channel](https://www.youtube.com/channel/UCzfZjJLp5Rrk7U2UKsOf8Fw) |
 
 
 ---
 
 ## Agreement
-For reading our license agreement and for further information about license plans, please visit <a href="https://www.dna-evolutions.com" target="_blank">www.dna-evolutions.com</a>.
 
---- 
+For license agreements and further information about license plans, please visit [www.dna-evolutions.com](https://www.dna-evolutions.com).
 
-## Authors
-A product by [dna-evolutions ](https://www.dna-evolutions.com)&copy;
+
+---
+
+<p align="center">
+  <strong>DNA Evolutions GmbH</strong><br>
+  <a href="https://www.dna-evolutions.com">Website</a> · 
+  <a href="mailto:info@dna-evolutions.com">info@dna-evolutions.com</a> · 
+  <a href="https://www.linkedin.com/company/dna-evolutions/">LinkedIn</a> · 
+  <a href="https://github.com/DNA-Evolutions">GitHub</a>
+</p>
